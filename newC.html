@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>HERS</title>
+    <link rel="stylesheet" href="office.css" />
+    <script defer src="office.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <br />
+      <div>
+        <h3 class="heady">General</h3>
+        <!-- <ul id="general-list" class="input-lists">
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+          <li>
+          </li>
+        </ul> -->
+        <input id="date-input" type="text" class="real-inputs" />Date <br />
+
+        <input id="address-input" type="text" class="real-inputs" />Address <br>
+
+        <input id="company-input" type="text" class="real-inputs" />Company <br>
+
+        <h3 class="heady">House Condition</h3>
+        <input id="a-b" type="checkbox" />Asbestos
+        
+        <h3 class="heady">Furnace</h3>
+        <input id="furnace-input" type="text" class="real-inputs" />Make <br />
+        <input id="furnace-eff" type="text" class="real-inputs" />AFUE <br />
+        <input id="input-btu" type="text" class="real-inputs" />Input BTU<br />
+        <input id="output-btu" type="text" class="real-inputs" />Output BTU<br />
+        <h3 class="heady">A/C</h3>
+
+        <input id="a/c-input" type="text" class="real-inputs" />Make <br />
+        <input id="tons" type="text" class="real-inputs" />Tons<br />
+        <input id="seer-input" type="text" class="real-inputs" />SEER<br />
+        <input
+          id="temp-input"
+          type="text"
+          class="real-inputs"
+        />OutDoor-Temp<br />
+        <h3 class="heady">Duct Leakage Test</h3>
+
+        <input
+          id="dlt-input"
+          type="text"
+          class="real-inputs"
+          placeholder="5%.........."
+        />Percent Target<br />
+        <input id="leakage" type="text" class="real-inputs" />Measured
+        Leakage<br />
+        <input id="open-check" type="checkbox" class="real-inputs" />Open
+        Chaseway <br />
+        <input id="pbs-check" type="checkbox" class="real-inputs" />Pass By
+        Smoke <br />
+        <input id="actual-check" type="checkbox" class="real-inputs" />Actual
+        Airflow Method <br />
+        <h3 class="heady">RCA</h3>
+
+        <input id="lp-input" type="text" class="real-inputs" />LPpsi<br />
+        <input id="hp-input" type="text" class="real-inputs" />HPpsi <br />
+        <input id="ev-input" type="text" class="real-inputs" />Ev <br />
+        <input id="co-input" type="text" class="real-inputs" />Co <br />
+        <input id="t1-input" type="text" class="real-inputs" />T1 <br />
+        <input id="t2-input" type="text" class="real-inputs" />T2 <br />
+        <input id="rq-s-input" type="text" class="real-inputs" />Required
+        Subcool <br />
+        <h3 class="heady">Airflow</h3>
+
+        <input id="input-airflow" type="text" class="real-inputs" />Measured
+        Airflow<br />
+        <input id="300-check" type="checkbox" class="real-inputs" />300 CFM
+        <br />
+        <input id="350-check" type="checkbox" class="real-inputs" />350 CFM
+        <br />
+        <input
+          id="flow-remed-check"
+          type="checkbox"
+          class="real-inputs"
+        />Airflow Remediation <br />
+        <input id="climate-zone" type="text" class="real-inputs" />Climate Zone
+        <br />
+        <h3 class="heady">Blower Door</h3>
+
+        <input id="bd-input" type="text" class="real-inputs" />Result <br />
+        <h3 class="heady">Fan-Watt-Draw</h3>
+
+        <input id="fan-w-draw" type="text" class="real-inputs" />Reading<br />
+        <h3 class="heady">Job Status</h3>
+
+        <input id="pass-check" type="checkbox" class="real-inputs" />Pass <br />
+        <input id="fail-check" type="checkbox" class="real-inputs" />Fail <br />
+
+        <input type="textfield" id="notes" class="real-inputs" />Notes <br />
+      </div>
+    </header>
+    <!-- Show All Data ---------------------------------->
+    <!-- -------------------------------------------- -->
+    <footer>
+      <h3 class="thing-show">
+        <div id="general-id" class="id-all">
+          <h3 class="header" id="general-text">General</h3>
+          <div class="empty-space" id="gen-ans-wrapper"></div>
+        </div>
+        <div id="fur-id" class="id-all">
+          <h3 class="header">Furnace</h3>
+          <div class="empty-space" id="fur-ans-wrapper"></div>
+        </div>
+        <div id="ac-id" class="id-all">
+          <h3 class="header">A/C</h3>
+          <div class="empty-space" id="ac-ans-wrapper"></div>
+        </div>
+        <div id="duct-id" class="id-all">
+          <h3 class="header">Duct Leakage</h3>
+          <div class="empty-space" id="leak-ans-wrapper"></div>
+        </div>
+        <div id="rca-id" class="id-all">
+          <h3 class="header">RCA</h3>
+          <div class="empty-space" id="rca-ans-wrapper"></div>
+        </div>
+        <div id="airflow-id" class="id-all">
+          <h3 class="header">Airflow</h3>
+          <div class="empty-space" id="flow-ans-wrapper"></div>
+        </div>
+        <div id="bd-id" class="id-all">
+          <h3 class="header">Blower Door</h3>
+          <div class="empty-space" id="bd-ans-wrapper"></div>
+        </div>
+        <div id="fwd-id" class="id-all">
+          <h3 class="header">Fan Watt Draw</h3>
+          <div class="empty-space" id="fwd-ans-wrapper"></div>
+        </div>
+        <div id="status-id" class="id-all">
+          <h3 class="header">Job Status</h3>
+          <div class="empty-space" id="stat-ans-wrapper"></div>
+        </div>
+        <div id="notes-id" class="id-all">
+          <h3 class="header">Notes</h3>
+          <div class="empty-space" id="notes-ans-wrapper"></div>
+        </div>
+      </h3>
+    </footer>
+
+    <div class="button-wrapper">
+      <button onclick="paperWork()">Turn Gears</button>
+    </div>
+  </body>
+</html>
